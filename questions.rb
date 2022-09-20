@@ -1,16 +1,18 @@
 class Questions
 
-  def self.random_number_1
-    number_1 = rand(1..20)
+  def initialize
+    @number_1 = rand(1..20)
+    @number_2 = rand(1..20)
   end
 
-  def self.random_number_2
-    number_2 = rand(1..20)
-  end
+  def question_answer(current_player)
+  
+    puts question = "#{current_player}: What does #{@number_1} plus #{@number_2} equal?"
+    print "> "
 
-  def self.question
-    question = "What does #{self.random_number_1} plus #{self.random_number_2} equal?"
-    puts question
+    answer = gets.chomp.to_i == @number_1 + @number_2
+    puts answer  ? "#{current_player}: Bingo!" : "#{current_player}: No way!"
+    return answer
   end
 
 end

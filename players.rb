@@ -6,4 +6,13 @@ class Players
     @player_lives = player_lives
   end
 
+  def player_has_lost
+
+    if @player_lives == 0
+      return true
+    else
+      return false
+    end
+
+  end
 end
