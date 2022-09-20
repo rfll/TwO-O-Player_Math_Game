@@ -6,4 +6,6 @@ require './questions'
 # puts p.player_name
 # puts p.player_lives
 
-Questions.random_numbers
+# Questions.random_numbers
+
+Questions.question
